@@ -1,0 +1,16 @@
+<h1>Login</h1>
+    <form method="POST" action="{% url 'login' %}">
+        {% csrf_token %}
+
+        <div class="form-group">
+            <label for="username_login">Username</label>
+            <input type="text" name="username" class="form-control" id="username_login" aria-describedby="user-login" placeholder="Enter username" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
+        </div>
+
+        <button type="submit" class="btn btn-secondary">Login</button>
+    </form>
